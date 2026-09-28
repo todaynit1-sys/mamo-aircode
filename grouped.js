@@ -1,6 +1,8 @@
 'use strict';
 let groupSignature='',groupPage=0,openGroup=null,rowPage=0;
-const GROUP_PAGE_SIZE=6,ROW_PAGE_SIZE=6;
+const groupDesktop=matchMedia('(min-width:1100px)'),ROW_PAGE_SIZE=6;
+let GROUP_PAGE_SIZE=groupDesktop.matches?12:6;
+groupDesktop.addEventListener('change',e=>{const anchor=openGroup??groupPage*GROUP_PAGE_SIZE;GROUP_PAGE_SIZE=e.matches?12:6;groupPage=Math.floor(anchor/GROUP_PAGE_SIZE);if(document.querySelector('#results.grouped-results'))render()});
 function groupStandards(records){const groups=new Map();for(const r of records){const key=JSON.stringify([r.pollutant,norm(r.facility),r.regime,r.unit]);if(!groups.has(key))groups.set(key,{...r,rows:[]});groups.get(key).rows.push(r)}return [...groups.values()]}
 function groupRange(g){const values=g.rows.map(r=>Number(r.value));if(values.some(v=>!Number.isFinite(v)))return esc(g.rawValue);const low=Math.min(...values),high=Math.max(...values);return `${low===high?low:low+'–'+high} <small>${esc(g.unit)}</small>`}
 function groupPager(page,total,attribute,label){return total>1?`<nav class="group-pager" aria-label="${label}"><button ${attribute}="${page-1}" ${page===0?'disabled':''} aria-label="${label} 이전">← 이전</button>${pageJumpMarkup(attribute==='data-group-page'?'group':'row',page+1,total,label)}<button ${attribute}="${page+1}" ${page===total-1?'disabled':''} aria-label="${label} 다음">다음 →</button></nav>`:''}

@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='aircode-v20-type-hierarchy';
+const CACHE='aircode-v21-regular-facilities';
 const SHELL=['./','./index.html','./style.css','./mobile.css','./mobile-polish.css','./compact.css','./source-excerpt.js','./focus-layout.js','./focus-layout.css','./page-jump.js','./method-figures.js','./method-figures.css','./method-reading.js','./methods.js','./methods.css','./method-preview.js','./method-preview.css','./app.js','./numeric.js','./numeric.css','./grouped.js','./grouped.css','./data.json','./pollutants.json','./pollutants.js','./pollutants.css','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('aircode-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});

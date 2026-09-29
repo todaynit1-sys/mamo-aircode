@@ -27,14 +27,14 @@
 .numeric-toolbar-top label{font-weight:400}
 .pollutant-badge{font-weight:500}
 .facility-group .group-toggle{font-weight:400}
-.facility-group .group-info>strong{font-weight:400}
+.facility-group .group-info>strong{font-weight:700}
 .facility-group .group-meta{font-weight:400}
 .facility-group .group-range b{font-weight:650}
 .facility-group .group-range b small{font-weight:400}
 .criteria-conditions,.criteria-conditions>div:last-child{font-weight:400}
 .criteria-value strong{font-weight:650}
 .criteria-value span,.criteria-value>small{font-weight:400}
-.numeric-card .card-title,.numeric-facility{font-weight:400}
+.numeric-card .card-title,.numeric-facility{font-weight:700}
 .numeric-facts strong{font-weight:400}
 .numeric-detail-value strong,.number-block>strong{font-weight:650}
 .detail-conditions,.notes-text{font-weight:400}

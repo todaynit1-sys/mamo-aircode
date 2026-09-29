@@ -1,0 +1,40 @@
+/* Phone controls remain readable without enlarging the result cards. */
+@media(max-width:640px){
+ html{scroll-padding-bottom:calc(80px + env(safe-area-inset-bottom));-webkit-text-size-adjust:100%}
+ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+ .mobile-nav{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -3px 12px #102f380b}
+ .mobile-nav button{min-width:0;position:relative}
+ .mobile-nav button.active:before{content:'';position:absolute;top:0;width:24px;height:3px;border-radius:0 0 3px 3px;background:var(--green)}
+ .icon-button,.focus-tool{width:44px;height:44px;min-width:44px;min-height:44px;flex-shrink:0}
+ .focus-layout .pollutant-tabs button,.suggestions button,.facility-shortcuts>button{min-height:44px}
+ .pollutant-tabs,.facility-shortcuts{overscroll-behavior-x:contain;scroll-padding:4px}
+ input,select,textarea{font-size:16px}
+ .focus-layout .result-top{flex-wrap:wrap;gap:2px 8px}
+ .focus-layout .result-top>div{flex:1 1 190px;min-width:0}
+ .focus-layout .result-top #sort{min-height:44px;font-size:14px;max-width:100%}
+ #filters-dialog fieldset label,#filters-dialog .text-button{min-height:44px}
+ #filters-dialog input[type=radio]{width:18px;height:18px;flex-shrink:0}
+ #filters-dialog .focus-filter-done{position:sticky;bottom:8px;box-shadow:0 2px 12px #102f381f}
+ #detail,#info-dialog,#filters-dialog,#figure-dialog{max-height:calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overscroll-behavior:contain}
+ #detail{width:calc(100% - 16px);max-width:calc(100% - 16px);border-radius:12px}
+ #detail-body{padding:10px 12px calc(16px + env(safe-area-inset-bottom))}
+ .detail-top{z-index:3;min-height:56px}
+ .detail-heading{font-size:19px;line-height:1.5;overflow-wrap:anywhere}
+ .detail-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ .detail-actions .button{white-space:normal;text-align:center;justify-content:center;font-size:14px;padding:8px;overflow-wrap:anywhere}
+ .method-page summary,.method-recent summary{min-height:44px;align-content:center}
+ .method-page pre{font-size:15px;line-height:1.7}
+ .text-jump-row,.preview-jump-row{flex-wrap:wrap;padding:8px;gap:6px}
+ .text-jump-row>span,.preview-jump-row>span{flex:1 1 100px}
+ .text-jump-row .page-jump,.preview-jump-row .page-jump{margin-left:auto}
+ .inline-figure-heading{flex-wrap:wrap;gap:3px 8px}
+ .page-inline-figures{padding:6px}
+ .figure-dialog-scroll{margin:0 6px 8px;max-height:65dvh;overscroll-behavior:contain}
+ .figure-dialog-top h2{margin:0;font-size:15px;overflow-wrap:anywhere}
+ .method-recent .button{min-height:44px;width:100%;font-size:13px}
+ .method-recent>div{display:grid;grid-template-columns:minmax(0,1fr)}
+ #methods-view .method-intro>span{display:none}
+ #methods-view .method-guidance summary,#method-reset{min-height:44px}
+ footer{padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

@@ -1,7 +1,7 @@
 'use strict';
 window.MethodFigures=(()=>{
  let indexPromise=null,generation=0;
- const index=()=>indexPromise||(indexPromise=fetch('method-figures.json').then(r=>{if(!r.ok)throw Error('index');return r.json()}).catch(e=>{indexPromise=null;throw e}));
+ const index=()=>indexPromise||(indexPromise=fetch('method-figures.json?v=24').then(r=>{if(!r.ok)throw Error('index');return r.json()}).catch(e=>{indexPromise=null;throw e}));
  function dispose(){generation++;document.getElementById('figure-dialog')?.close()}
  function zoom(item){
   let dialog=document.getElementById('figure-dialog');

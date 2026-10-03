@@ -16,7 +16,7 @@ window.MethodReading=(()=>{
   host.addEventListener('submit',e=>{const form=e.target.closest('[data-jump-kind="text"]');if(form&&form.checkValidity()){current=Number(form.querySelector('input').value);remember(r,current)}});
   host.addEventListener('click',e=>{const button=e.target.closest('[data-inline-figure-page]');if(button){current=Number(button.dataset.inlineFigurePage);remember(r,current)}});
   if(!rows.some(x=>x.id===r.id))remember(r,1);
-  const copy=document.querySelector('#method-copy');copy.textContent='현재 페이지 링크 복사';copy.onclick=async()=>{const u=new URL('https://todaynit1-sys.github.io/mamo-aircode/');u.hash=`methods?method=${encodeURIComponent(r.id)}&page=${current}`;try{await navigator.clipboard.writeText(u.href);toast(`${current}쪽 링크를 복사했습니다`)}catch{toast('링크 복사를 지원하지 않는 브라우저입니다')}};
+  const copy=document.querySelector('#method-copy');copy.textContent='현재 페이지 링크 복사';copy.onclick=async()=>{const u=new URL('https://mamo-aircode.vercel.app/');u.hash=`methods?method=${encodeURIComponent(r.id)}&page=${current}`;try{await navigator.clipboard.writeText(u.href);toast(`${current}쪽 링크를 복사했습니다`)}catch{toast('링크 복사를 지원하지 않는 브라우저입니다')}};
   const shared=Number(methodParams.get('page'));methodParams.delete('page');if(Number.isInteger(shared)&&shared>=1&&shared<=r.pages)jump(shared);
  }
  document.addEventListener('click',e=>{if(e.target.closest('[data-clear-method-history]')){rows=[];try{localStorage.removeItem(key)}catch{}refresh();toast('읽기 기록을 지웠습니다')}});

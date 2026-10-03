@@ -1,0 +1,73 @@
+{
+  "entries": [
+    {
+      "html": "index.html",
+      "name": "app",
+      "scripts": [
+        "numeric.js",
+        "grouped.js",
+        "pollutants.js",
+        "method-preview.js",
+        "method-figures.js",
+        "method-reading.js",
+        "methods.js",
+        "page-jump.js",
+        "source-excerpt.js",
+        "focus-layout.js",
+        "app.js"
+      ],
+      "styles": [
+        "style.css",
+        "numeric.css",
+        "grouped.css",
+        "pollutants.css",
+        "methods.css",
+        "method-preview.css",
+        "method-figures.css",
+        "mobile.css",
+        "compact.css",
+        "focus-layout.css",
+        "mobile-polish.css",
+        "companion-links.css"
+      ]
+    }
+  ],
+  "files": [
+    "manifest.webmanifest",
+    "data.json",
+    "pollutants.json",
+    "methods-index.json",
+    "method-figures.json",
+    "icon-192.png",
+    "icon-512.png",
+    "eco-icon.svg",
+    "share-daegi.png"
+  ],
+  "directories": [
+    {
+      "path": "documents",
+      "pattern": "\\.pdf$"
+    },
+    {
+      "path": "methods",
+      "pattern": "\\.(json|pdf)$"
+    },
+    {
+      "path": "pages",
+      "pattern": "\\.webp$"
+    },
+    {
+      "path": "method-figures",
+      "pattern": "\\.webp$"
+    },
+    {
+      "path": "vendor/pdfjs",
+      "pattern": "(?:\\.(mjs|js|wasm|pfb|ttf)$|/LICENSE(?:_[A-Z0-9_]+)?$)"
+    }
+  ],
+  "worker": {
+    "shell": "SHELL",
+    "version": "CACHE",
+    "prefix": "aircode-prod-"
+  }
+}

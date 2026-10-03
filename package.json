@@ -1,0 +1,12 @@
+{
+  "name": "mamo-aircode",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build-production.cjs"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "7.2.0",
+    "terser": "5.51.2"
+  }
+}

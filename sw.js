@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='aircode-v27-eco-links';
+const CACHE='aircode-v28-compact-links';
 const SHELL=['./','./index.html','./style.css','./companion-links.css','./eco-icon.svg','./mobile.css','./mobile-polish.css','./compact.css','./source-excerpt.js','./focus-layout.js','./focus-layout.css?v=26','./page-jump.js','./method-figures.js?v=26','./method-figures.css','./method-reading.js','./methods.js?v=26','./methods-index.json?v=26','./methods.css?v=26','./method-preview.js','./method-preview.css','./app.js?v=26','./numeric.js','./numeric.css','./grouped.js','./grouped.css','./data.json','./pollutants.json','./pollutants.js','./pollutants.css','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('aircode-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});

@@ -1,8 +1,18 @@
 /* Related application, kept visible on desktop and mobile. */
-.companion-apps { padding: 0 22px; border-bottom: 1px solid var(--line); background: white; }
-.companion-apps a { display: inline-flex; align-items: center; flex-wrap: nowrap; gap: 6px; max-width: 100%; min-height: 32px; color: var(--ink); font-size: 13px; line-height: 1.25; white-space: nowrap; }
+.companion-apps { display: flex; flex: none; margin-left: auto; }
+.companion-apps a { display: inline-flex; align-items: center; flex-wrap: nowrap; gap: 4px; min-height: 32px; padding-inline: 6px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 12px; line-height: 1.25; white-space: nowrap; }
 .companion-apps img { width: 16px; height: 16px; flex: none; }
 .companion-arrow { font-size: 14px; flex: none; color: var(--green); }
 .companion-apps a:hover { text-decoration: underline; }
-@media(max-width:640px) { .companion-apps { padding-inline: 16px; } }
+.topbar .top-meta { margin-left: 12px; }
+@media(min-width:641px) and (max-width:900px) {
+  .topbar { padding-inline: 16px; gap: 8px; }
+  .topbar .edition { display: none; }
+}
+@media(max-width:640px) {
+  .topbar { gap: 6px; flex-wrap: nowrap; }
+  .topbar .mobile-brand { flex: none; white-space: nowrap; }
+  .topbar .top-meta { margin-left: 0; }
+  .topbar .edition, .companion-apps img { display: none; }
+}
 @media print { .companion-apps { display: none; } }

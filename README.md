@@ -1,6 +1,6 @@
 # 에어코드 · AIRCODE
 
-[앱 열기](https://todaynit1-sys.github.io/mamo-aircode/)
+[앱 열기](https://mamo-aircode.vercel.app/)
 
 대기오염물질 배출허용기준·배출시설 검색 앱입니다.
 
@@ -12,7 +12,7 @@
 
 제작: 신현준연구사(hjuni@korea.kr)
 
-이 저장소는 배포된 정적 웹사이트 파일입니다. GitHub Pages는 main 브랜치의 루트에서 게시합니다.
+이 저장소는 배포된 정적 웹사이트 파일입니다. Vercel은 main 브랜치의 루트에서 배포합니다.
 첨부 법령을 기반으로 하며 최신 개정 여부와 개별 시설의 적용 조건은 현행 법령에서 확인하세요.
 
 

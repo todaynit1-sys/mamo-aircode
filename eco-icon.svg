@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="AI 환경비서 — 잎과 궤도">
+  <rect width="512" height="512" rx="112" fill="#0f766e"/>
+  <path d="M360 139A160 160 0 1 0 410 270" fill="none" stroke="#e0f2f0" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="408" cy="186" r="19" fill="#e0f2f0"/>
+  <path d="M174 322C136 223 204 156 336 154c-1 128-63 195-162 168Z" fill="#ffffff"/>
+  <path d="m172 340 121-121" fill="none" stroke="#0f766e" stroke-width="20" stroke-linecap="round"/>
+</svg>

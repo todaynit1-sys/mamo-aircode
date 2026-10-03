@@ -1,0 +1,10 @@
+/* Related application, kept visible on desktop and mobile. */
+.companion-apps { padding: 10px 22px; border-bottom: 1px solid var(--line); background: white; }
+.companion-apps a { display: flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%; min-height: 44px; color: var(--ink); }
+.companion-apps img { width: 32px; height: 32px; flex: none; border-radius: 8px; }
+.companion-apps strong { display: block; font-size: 14px; line-height: 1.5; }
+.companion-apps small { display: block; color: var(--ink); font-size: 12px; line-height: 1.6; }
+.companion-arrow { margin-left: 8px; font-size: 20px; flex: none; color: var(--green); }
+.companion-apps a:hover strong { text-decoration: underline; }
+@media(max-width:640px) { .companion-apps { padding: 6px 16px; } }
+@media print { .companion-apps { display: none; } }
